@@ -5,7 +5,7 @@
 
 #### _Template for \<head> tags to aid SEO_
 
-Developed as a guide to aid myself and maybe others with a collective of SEO meta tags for the purpose to act as a template for \<head> tags. :) These head tags are aimed for the landing / home page of the site but can be altered to reflect any page as required. The suggested SEO content inside the head tags developed from:.....
+Developed as a guide to aid with a collective of SEO meta tags for the purpose to act as a template for \<head> tags. These head tags are aimed for the landing / home page of the site but can be altered to reflect any page as required. The suggested SEO content inside the head tags developed from:.....
 * https://developers.facebook.com/docs/sharing/webmasters
 * https://developer.mozilla.org/en-US/docs/Web/Manifest
 
@@ -16,8 +16,8 @@ Developed as a guide to aid myself and maybe others with a collective of SEO met
 
 ---
 ## HOW TO RUN SCRIPT
-* __Add variables to variables.json file.__
-* __Run Python Script with: "RunMe" python script.__
+1. __Enter your variables__ into the _variables.json_ file.
+1. __Run Python Script__ with: _"RunMe"_ python script.
 
 
 Enter your variables into "variables.json" file. If you don't have the variables to enter, leave them blank, or delete from "variables.json" file.
