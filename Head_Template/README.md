@@ -11,7 +11,7 @@ Developed as a guide to aid myself and maybe others with a collective of SEO met
 
 ---
 <p align="center">
-    <img src="https://github.com/framework2232/python/head_template/blob/master/img/screenshot_A.png?raw=true" alt="Screenshot of <head> tags" width="500"/>
+    <img src="https://github.com/framework2232/Python/blob/master/Head_Template/img/screenshot_A.PNG?raw=true" alt="Screenshot of <head> tags" width="500"/>  
 </p>
 
 ---
