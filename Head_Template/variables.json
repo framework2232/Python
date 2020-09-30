@@ -4,7 +4,7 @@
     "cssFonts"              : "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
     "cssStylePath"          : "css/style.css",
     "websiteTitle"          : "My Website",
-    "websiteDescription"    : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta iure porro rerum necessitatibus cupiditate atque aspernatur quos sequi illo consequatur.",
+    "websiteDescription"    : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta iure porro rerum necessitatibus.",
     "websiteURL"            : "https://whateveryoursitenameis.com",
     "websiteURLoptional1"   : "https://whateveryoursitenameis.com/products/",
     "websiteURLoptional2"   : "https://whateveryoursitenameis.com/gallery/",

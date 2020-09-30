@@ -19,18 +19,103 @@ Developed as a guide to aid with a collective of SEO meta tags for the purpose t
 1. __Enter your variables__ into the _variables.json_ file.
 1. __Run Python Script__ with: _"RunMe"_ python script.
 
+---
 
-Enter your variables into "variables.json" file. If you don't have the variables to enter, leave them blank, or delete from "variables.json" file.
+### Variables available inside the "variables.json" file:
+Following is a list of all the variables inside the _variable.json_ file, followed by a short description, and finally an example of the json variables in use. Enter your variables into _variables.json_ file. If you don't have the variables to enter, leave them blank, or delete from _variables.json_ file.
 
+1. __fileName__
+   - ___COMPULSORY -___ This defines the file name to be built. eg _index.html_. Without a file name, this Python script will terminate.
 ```json
-"cssGoogleFonts"     : "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
-"cssStylePath"       : "css/style.css",
-"websiteTitle"       : "My Website",
-"websiteDescription" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta iure porro rerum necessitatibus cupiditate atque aspernatur quos sequi illo consequatur.",
+"fileName" : "index.html"
+```
+1. __cssIcons__
+   - _optional_ variable to define path to external social icons provider eg Font Awesome.
+```json
+"cssIcons" : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+```
+1. __cssFonts__
+   - _optional_ variable to define path to external fonts provider eg Google Fonts.
+```json
+"cssFonts" : "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+```
+1. __cssStylePath__
+   - _optional_ variable to define path to the sites cascading style sheet (CSS), commonly: style.css. This may not exist if \<style> tags are used inside the \<head> tags or when CSS in not required.
+```json
+"cssStylePath" : "css/style.css"
+```
+1. __websiteTitle__
+   - ___ENCOURAGED___ variable to define the websites name. The website name is used several times in the site and may be used in Google search. If left blank, Google may generate automated of page titles.
+```json
+"websiteTitle" : "My Website"
+```
+1. __websiteDescription__
+   - ___ENCOURAGED___ A description of the webpage is about. Recommended 60 to 150 characters long. Aids with Google search. If left blank, Google may generate automated of page descriptions.
+```json
+"websiteDescription" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta iure porro rerum necessitatibus."
+```
+1. __websiteURL__
+   - _optional_ 
+```json
+"websiteURL" : "https://whateveryoursitenameis.com"
+```
+1. websiteURLoptional1
+   - _optional_ 
+```json
+"websiteURLoptional1" : "https://whateveryoursitenameis.com/products/"
+```
+1. websiteURLoptional2
+   - _optional_ 
+```json
+"websiteURLoptional2" : "https://whateveryoursitenameis.com/gallery/"
+```
+1. websiteImageURL
+   - _optional_ 
+```json
+"websiteImageURL" : "https://whateveryoursitenameis.com/image.jpg"
+```
+1. websiteImageWidth
+   - _optional_ 
+```json
+"websiteImageWidth" : "1920"
+```
+1. websiteImageHeight
+   - _optional_ 
+```json
+"websiteImageHeight" : "1080"
+```
+1. twitterHandle
+   - _optional_ 
+```json
+"twitterHandle" : "@mytwitterhandle"
+```
+1. manifestURL
+   - _optional_ 
+```json
+"manifestURL" : "manifest.json"
+```
+1. faviconICO
+   - _optional_ 
+```json
+"faviconICO" : "favicon.ico"
+```
+1. faviconPNG
+   - _optional_ 
+```json
+"faviconPNG" : "favicon.png"
+```
+1. appleTouchIconPNG
+   - _optional_ 
+```json
+"appleTouchIconPNG" : "apple-touch-icon.png"
+```
+1. logoSVG
+   - _optional_ 
+```json
+"logoSVG" : "logo.svg"
 ```
 
 ---
-
 
 ## ABOUT FRAMEWORK2232
 
