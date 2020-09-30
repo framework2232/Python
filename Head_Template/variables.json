@@ -1,0 +1,20 @@
+{    
+    "fileName"              : "site.html",
+    "cssIcons"              : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+    "cssFonts"              : "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
+    "cssStylePath"          : "css/style.css",
+    "websiteTitle"          : "My Website",
+    "websiteDescription"    : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta iure porro rerum necessitatibus cupiditate atque aspernatur quos sequi illo consequatur.",
+    "websiteURL"            : "https://whateveryoursitenameis.com",
+    "websiteURLoptional1"   : "https://whateveryoursitenameis.com/products/",
+    "websiteURLoptional2"   : "https://whateveryoursitenameis.com/gallery/",
+    "websiteImageURL"       : "https://whateveryoursitenameis.com/image.jpg",
+    "websiteImageWidth"     : "1920",
+    "websiteImageHeight"    : "1080",
+    "twitterHandle"         : "@mytwitterhandle",
+    "manifestURL"           : "manifest.json",
+    "faviconICO"            : "favicon.ico",
+    "faviconPNG"            : "favicon.png",
+    "appleTouchIconPNG"     : "apple-touch-icon.png",
+    "logoSVG"               : "logo.svg"
+}
