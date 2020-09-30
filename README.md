@@ -28,7 +28,7 @@ __This repository is shared public in the hope that it will be useful, but WITHO
 
 ---
 
-[HeadTagFramework]: https://github.com/framework2232/Python/Head_Template "Head Tag Framework"
+[HeadTagFramework]: https://github.com/framework2232/Python/tree/master/Head_Template "Head Tag Framework"
 
 [Twitter]: https://github.com/framework2232/Python "Twitter - Framework2232"
 [Instagram]: https://github.com/framework2232/HTML "Instagram - Framework2232"
