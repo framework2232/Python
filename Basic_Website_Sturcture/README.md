@@ -7,8 +7,8 @@
 
 * This script is for anyone who is building a website from complete scratch using HTML and CSS.
 * This python script will build a common folder structure and add basic files.
-   * empty ___index.html___ inside root directory
-   * empty ___style.css___ inside css directory
+   * empty ___index.html___ inside root folder
+   * empty ___style.css___ inside __css__ folder
    * empty ___img___ folder
 * The script reduces time in the basic setup of file structure as the folders and files are ready to go.
 * This script is designed to be run as the first part of the process of writting the website.
@@ -16,7 +16,6 @@
 ---
 ## HOW TO RUN SCRIPT:
 1. __Run Python Script__ with: _"RunMe"_ python script.
-
 
 ---
 ## HOW THE SCRIPT WORKS
@@ -52,16 +51,15 @@ def makeMyFile(folder, file):
 
 I independently work on Framework2232 in my free time. If you like show your support, please follow and promote the usual social media.
 
-__This repository is shared public in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.__
-
-[See the GNU General Public License for more details.](http://www.gnu.org/licenses/)
-
----
 [__Twitter__][Twitter]
 | [__Instagram__][Instagram]
 | [__YouTube__][YouTube]
 | [__GitHub__][GitHub]
 | [__Pinterest__][Pinterest]
+
+__This repository is shared public in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.__
+
+[See the GNU General Public License for more details.](http://www.gnu.org/licenses/)
 
 ---
 
