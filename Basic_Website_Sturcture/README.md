@@ -15,8 +15,22 @@
 
 ---
 ## HOW TO RUN SCRIPT:
-1. __Run Python Script__ with: _"RunMe"_ python script.
+1. __Run Python Script__ with: _"RunMe"_ python script. This will bring up the GUI.
 
+
+<p align="center">
+    <img src="https://github.com/framework2232/framework2232.github.io/blob/master/images/banner.png?raw=true" alt="Framework2232 Logo" width="500"/>
+</p>
+
+
+<p align="center">
+    <img src="https://github.com/framework2232/framework2232.github.io/blob/master/images/banner.png?raw=true" alt="Framework2232 Logo" width="500"/>
+</p>
+
+
+<p align="center">
+    <img src="https://github.com/framework2232/framework2232.github.io/blob/master/images/banner.png?raw=true" alt="Framework2232 Logo" width="500"/>
+</p>
 ---
 ## HOW THE SCRIPT WORKS
 
