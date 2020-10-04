@@ -12,6 +12,11 @@ The Head Tag Framework was developed as a guide to aid with a collective of SEO 
 
 ---
 
+## [Basic Website Structure.][BasicWebsiteStructure]
+This script is for anyone who is building a website from complete scratch using HTML and CSS. The script reduces time in the basic setup of file structure as the folders and files are ready to go. This script is designed to be run as the first part of the process of writting the website.
+
+---
+
 ## ABOUT
 
 [__Twitter__][Twitter]
@@ -29,6 +34,7 @@ __This repository is shared public in the hope that it will be useful, but WITHO
 ---
 
 [HeadTagFramework]: https://github.com/framework2232/Python/tree/master/Head_Template "Head Tag Framework"
+[BasicWebsiteStructure]: https://github.com/framework2232/Python/tree/master/Basic_Website_Sturcture "Basic Website Structure"
 
 [Twitter]: https://github.com/framework2232/Python "Twitter - Framework2232"
 [Instagram]: https://github.com/framework2232/HTML "Instagram - Framework2232"
