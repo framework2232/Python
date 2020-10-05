@@ -1,7 +1,7 @@
 <p align="center">
     <img src="https://github.com/framework2232/framework2232.github.io/blob/master/images/banner.png?raw=true" alt="Framework2232 Logo" width="500"/>
 </p>
-<h1 align=center>BASIC WEBSITE STRUCTURE</h1>
+<h1 align=center>QS File Template</h1>
 
 __AUTHOR:__ Framework2232
 
@@ -11,7 +11,7 @@ __DATE:__ 05OCT20
 
 __VERSION:__ 1.0.3
 
-__GITHUB:__ [__/framework2232/.../Basic_Website_Structure__](https://github.com/framework2232/Python/tree/master/Basic_Website_Sturcture "Basic Website Structure")
+__GITHUB:__ [__/framework2232/.../QSfiletemplate__](https://github.com/framework2232/Python/tree/master/QSfiletemplate "QS File Template")
 
 __WEBSITE:__ [__https://framework2232.github.io__](https://framework2232.github.io "Framework2232")
 
@@ -53,7 +53,7 @@ This script runs successfully with:
 
 
 <p align="center">
-    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screen_GUI_Selected.PNG?raw=true" alt="Image of GUI with all buttons selected" width="500"/>
+    <img src="https://github.com/framework2232/Python/blob/master/QSfiletemplate/img/screen_GUI_Selected.PNG?raw=true" alt="Image of GUI with all buttons selected" width="500"/>
 </p>
 
 * ___Above:__ Image shows all buttons green, therefore when 'BUILD' is selected, all files and folders will be made (default)._
@@ -61,7 +61,7 @@ This script runs successfully with:
 ---
 
 <p align="center">
-    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screen_GUI_Deselected.PNG?raw=true" alt="Image of GUI with some buttons selected and others deselected" width="500"/>
+    <img src="https://github.com/framework2232/Python/blob/master/QSfiletemplate/img/screen_GUI_Deselected.PNG?raw=true" alt="Image of GUI with some buttons selected and others deselected" width="500"/>
 </p>
 
 * ___Above:__ Image shows the red buttons have been deselected, therefore only the green files and folders will be made. On the right the diagram has selected files in green, and deselected files in grey._
@@ -72,7 +72,7 @@ This script runs successfully with:
   * If the folders and files __DON'T__ already exist, the script builds the selected files, opens file manager and displays the new folders and files.
 
 <p align="center">
-    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screen_GUI_WarningFilesExist.PNG?raw=true" alt="Image of error messagebox displayed when file already exists" width="500"/>
+    <img src="https://github.com/framework2232/Python/blob/master/QSfiletemplate/img/screen_GUI_WarningFilesExist.PNG?raw=true" alt="Image of error messagebox displayed when file already exists" width="500"/>
 </p>
 
 * ___Above:__ Image shows an error messagebox advising the folders already exist, preventing accidental overwrite._
@@ -80,7 +80,7 @@ This script runs successfully with:
 ---
 
 <p align="center">
-    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screen_FileManagerDisplayingFiles.PNG?raw=true" alt="Image of opened File Manager displaying the folders and files" width="500"/>
+    <img src="https://github.com/framework2232/Python/blob/master/QSfiletemplate/img/screen_FileManagerDisplayingFiles.PNG?raw=true" alt="Image of opened File Manager displaying the folders and files" width="500"/>
 </p>
 
 * ___Above:__ Image shows file manager box displaying the newly build files and folders._
@@ -129,7 +129,7 @@ def makeMyFile(folder, file):
 
 ## ABOUT FRAMEWORK2232
 
-I independently work on Framework2232 in my free time. If you like show your support, please follow and promote the usual social media.
+I independently work on Framework2232 in my free time. If you'd like show your support, please follow and promote the usual social media.
 
 [__Twitter__][Twitter]
 | [__Instagram__][Instagram]

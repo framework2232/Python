@@ -3,9 +3,9 @@ import tkinter.messagebox
 import os
 
 
-# ==============================================================
-#                   CONTENTS
-# ==============================================================
+# =======================================================
+#           CONTENTS - QS File Template
+# =======================================================
 # 1   Import the required libraries
 #           a.  tkinter
 #           b.  os
@@ -185,8 +185,8 @@ def endApp():
 
  
 # defines variables as listed
-appTitle = "Quick Website Structure"
-appDescription = "This app is for anyone who is building a website from complete scratch using HTML and CSS. The app reduces time in the basic setup of file structure by building a common folders and adding blank basic files.\nBy default, the files and folders include - index.html, style.css, robots.txt, mainfest.json and main.js."
+appTitle = "QS File Template"
+appDescription = "QS File Template is for anyone who is building a website from complete scratch using HTML and CSS. QS File Template reduces time in the basic setup of file structure by building a common folders and adding blank basic files.\nBy default, the files and folders include - index.html, style.css, robots.txt, mainfest.json and main.js."
 appInstructions = "Click 'BUILD' for default, or deselect as required."
 appCopyright = "Framework2232 © 2020 - https://framework2232.github.io"
 appOverwriteWarning = "APP WARNING:\n    These folder(s) or file(s) already exist.\nSOLUTION:\n    Move or rename the existing files or folders\n    Select 'BUILD' again."
