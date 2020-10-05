@@ -1,5 +1,44 @@
-from tkinter import Tk,Label,Button,Canvas
+from tkinter import Tk,Label,Button,Canvas,filedialog
 import os
+
+
+# ==============================================================
+#                   CONTENTS
+# ==============================================================
+# 1   Import the required libraries
+#           a.  tkinter
+#           b.  os
+
+# 2   Define Functions
+#           a.  makeMyFolder
+#           b.  makeMyFile
+#           c.  include_index
+#           d.  include_style
+#           e.  include_robots
+#           f.  include_manifest
+#           g.  include_java
+#           h.  build
+#           i.  endApp
+
+# 3   Define variables
+#           a.  appTitle
+#           b.  appDescription
+#           c.  appInstructions
+#           d.  appCopyright
+#           e.  folderName
+#           f.  buttBG
+#           g.  buttFG
+#           h.  buttFONT
+#           i.  buttWIDTH
+#           j.  buttPADX
+#           k.  rowPADY
+
+# 4   Make a tkinter window including:
+#           -   labels
+#           -   buttons
+#           -   canvas with grid layout
+# ==============================================================
+
 
 
 # if the folder doesn't exist, the folder is made, 
@@ -92,42 +131,45 @@ def include_java():
 def build(): 
     # makes folder "webSite" and makes empty file "index.html"
     if button_index["bg"] == "green":
-        folder = '/webSite/'
+        folder = folderName
         file = 'index.html'
         makeMyFolder(folder)
         makeMyFile(folder, file)
 
     # makes folder "css" inside webSite folder and makes empty file "style.css"
     if button_style["bg"] == "green":
-        folder = '/webSite/css'
+        folder = folderName + "css"
         file = 'style.css'
         makeMyFolder(folder)
         makeMyFile(folder, file)
 
     # makes folder "webSite" and makes empty file "index.html"
     if button_robots["bg"] == "green":
-        folder = '/webSite/'
+        folder = folderName
         file = 'robots.txt'
         # makeMyFolder(folder)
         makeMyFile(folder, file)
 
     # makes folder "webSite" and makes empty file "index.html"
     if button_manifest["bg"] == "green":
-        folder = '/webSite/'
+        folder = folderName
         file = 'manifest.json'
         # makeMyFolder(folder)
         makeMyFile(folder, file)
 
     # makes folder "webSite" and makes empty file "index.html"
     if button_java["bg"] == "green":
-        folder = '/webSite/'
+        folder = folderName
         file = 'main.js'
         # makeMyFolder(folder)
         makeMyFile(folder, file)
 
     # makes an empty folder "img" inside Website folder
-    folder = '/webSite/img'
+    folder = folderName + "img"
     makeMyFolder(folder)
+
+    # opens file manager to display made folder and files
+    filedialog.askopenfilename(initialdir="/", title="Your new files and folders are in: "+ folderName)
        
 def endApp():
     app.destroy()
@@ -136,10 +178,13 @@ def endApp():
  
 # defines variables as listed
 appTitle = "Quick Website Structure"
-appDescription = "This app is for anyone who is building a website from complete scratch using HTML and CSS. The app reduces time in the basic setup of file structure by building a common folders and adding blank basic files. \nBy default, the files and folders include - index.html, style.css, robots.txt, mainfest.json and main.js."
+appDescription = "This app is for anyone who is building a website from complete scratch using HTML and CSS. The app reduces time in the basic setup of file structure by building a common folders and adding blank basic files.\nBy default, the files and folders include - index.html, style.css, robots.txt, mainfest.json and main.js."
 appInstructions = "Click 'BUILD' for default, or deselect as required."
 appCopyright = "Framework2232 © 2020 - https://framework2232.github.io"
 
+
+# build folder in this varialble...
+folderName = '/website/'
 
 # define common button styles
 buttBG = "green"
@@ -150,10 +195,10 @@ buttPADX = "10"
 rowPADY = "5"
 
 
-# =============== MAKE A CANVAS WINDOW =============
+# =============== MAKE A TKINTER WINDOW =============
 app=Tk()
 app.title(appTitle)
-app.iconbitmap("icon.ico")
+app.iconbitmap("img/icon.ico")
 app.geometry("800x550")
 app.configure(bg="#141414")
 
@@ -199,10 +244,10 @@ button_build = Button(app, text = "Build", command = build)
 button_build.configure(bg = buttBG, fg = buttFG, font=buttFONT, width = buttWIDTH, padx = buttPADX) 
 
 
-# =============== BUILD CANVAS ===================
+# =============== BUILD CANVAS (diagram)===================
 my_canvas = Canvas(app, width=400, height="220", bg="#141414", highlightthickness=0)
 
-my_canvas.create_text(140, 20, text="/webSite/", fill="green", font=("bold 20"), anchor="e")
+my_canvas.create_text(140, 20, text="/website/", fill="green", font=("bold 20"), anchor="e")
 my_canvas.create_line(150, 20, 192, 20, fill="green", width="4")
 # line = vertical
 my_canvas.create_line(190, 20, 190, 202, fill="green", width="4")
