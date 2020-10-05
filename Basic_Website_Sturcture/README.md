@@ -7,11 +7,11 @@ __AUTHOR:__ Framework2232
 
 __COPYRIGHT:__ © 2020, Framework2232
 
-__DATE:__ 04OCT20
+__DATE:__ 05OCT20
 
-__VERSION:__ 1.0.1
+__VERSION:__ 1.0.3
 
-__GITHUB:__ [__/framework2232/.../Basic_Website_Sturcture__](https://github.com/framework2232/Python/tree/master/Basic_Website_Sturcture "Basic Website Structure")
+__GITHUB:__ [__/framework2232/.../Basic_Website_Structure__](https://github.com/framework2232/Python/tree/master/Basic_Website_Sturcture "Basic Website Structure")
 
 __WEBSITE:__ [__https://framework2232.github.io__](https://framework2232.github.io "Framework2232")
 
@@ -53,24 +53,34 @@ This script runs successfully with:
 
 
 <p align="center">
-    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screenShot_GUIa.PNG?raw=true" alt="Framework2232 Logo" width="500"/>
+    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screen_GUI_Selected.PNG?raw=true" alt="Image of GUI with all buttons selected" width="500"/>
 </p>
 
-* ___Above:__ Image shows all buttons green, therefore when build is selected, all files and folders will be made (default)._
+* ___Above:__ Image shows all buttons green, therefore when 'BUILD' is selected, all files and folders will be made (default)._
 
 ---
 
 <p align="center">
-    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screenShot_GUIb.PNG?raw=true" alt="Framework2232 Logo" width="500"/>
+    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screen_GUI_Deselected.PNG?raw=true" alt="Image of GUI with some buttons selected and others deselected" width="500"/>
 </p>
 
-* ___Above:__ Image shows some buttons have been deselected, therefore only the green files and folders will be made. On the right the diagram has selected files in green, and deselected files in grey._
+* ___Above:__ Image shows the red buttons have been deselected, therefore only the green files and folders will be made. On the right the diagram has selected files in green, and deselected files in grey._
 
 ---
-3. After selecting 'BUILD', the script builds the selected files, then opens __file manager__ to display the new folders and files.
+3. After selecting 'BUILD':
+  * If the folders and files __DO__ already exist, an error messagebox will be displayed and file manager window opened. This is to prevent any existing files being accidently overwritten. 
+  * If the folders and files __DON'T__ already exist, the script builds the selected files, opens file manager and displays the new folders and files.
 
 <p align="center">
-    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screenShot_files.PNG?raw=true" alt="Framework2232 Logo" width="500"/>
+    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screen_GUI_WarningFilesExist.PNG?raw=true" alt="Image of error messagebox displayed when file already exists" width="500"/>
+</p>
+
+* ___Above:__ Image shows an error messagebox advising the folders already exist, preventing accidental overwrite._
+
+---
+
+<p align="center">
+    <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screen_FileManagerDisplayingFiles.PNG?raw=true" alt="Image of opened File Manager displaying the folders and files" width="500"/>
 </p>
 
 * ___Above:__ Image shows file manager box displaying the newly build files and folders._
@@ -96,16 +106,14 @@ def makeMyFolder(folder):
         print('Made your folder: ' + folder)
 ```
 
-__3.__ If the folder _DOES_ exist, the folder is made:
+__3.__ If the folder _DOES_ exist, an error messagebox is displayed:
 ```python
-if not os.path.exists(folder):
-        os.makedirs(folder)
-        print('Made your folder: ' + folder)
-    else:
-        print('** CAUTION **            This folder already exists: ' + folder)
-        print('** SCRIPT TERMINATED **  Check the path is correct')
-        print('')
-        exit()
+def build():     
+    if os.path.exists(folderName):        
+        print('Warning box displayed: '+folderName+' already exists.')    
+        tkinter.messagebox.showerror("Overwrite WARNING", appOverwriteWarning)
+        filedialog.askopenfilename(initialdir="/", title="Move or Rename Folder: "+ folderName)
+    else:                
 ```
 
 __4.__ The empty file is built in the appropriate directory.
