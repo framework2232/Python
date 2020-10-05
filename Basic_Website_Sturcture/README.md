@@ -17,7 +17,6 @@ __WEBSITE:__ [__https://framework2232.github.io__](https://framework2232.github.
 
 ---
 
-
 ## PURPOSE
 #### _Developed as a quick folder / file builder for static HTML/CSS website._
 
@@ -36,12 +35,21 @@ __WEBSITE:__ [__https://framework2232.github.io__](https://framework2232.github.
    * __/webSite/manifest.json__
    * __/webSite/robots.txt__
 
+---
+
+## REQUIREMENTS
+
+This script runs successfully with:
+* Windows 10
+* Python 3.8.5 32bit using standard libraries:
+   * tkinter
+   * os
 
 ---
 ## HOW TO RUN SCRIPT:
 1. __Run Python Script__ with: _"RunMe"_ python script. 
 
-1. __Click 'BUILD'__ for the default file, or deselect the files not required. Changes can be made anytime before 'BUILD' is selected.
+2. __Click 'BUILD'__ for the default file, or deselect the files not required. Changes can be made anytime before 'BUILD' is selected.
 
 
 <p align="center">
@@ -59,12 +67,15 @@ __WEBSITE:__ [__https://framework2232.github.io__](https://framework2232.github.
 * ___Above:__ Image shows some buttons have been deselected, therefore only the green files and folders will be made. On the right the diagram has selected files in green, and deselected files in grey._
 
 ---
+3. After selecting 'BUILD', the script builds the selected files, then opens __file manager__ to display the new folders and files.
 
 <p align="center">
     <img src="https://github.com/framework2232/Python/blob/master/Basic_Website_Sturcture/img/screenShot_files.PNG?raw=true" alt="Framework2232 Logo" width="500"/>
 </p>
 
-* ___Above:__ Image shows resulting file structure. Existing is files and folders ready for your data._
+* ___Above:__ Image shows file manager box displaying the newly build files and folders._
+
+
 
 ---
 ## HOW THE SCRIPT WORKS
