@@ -1,4 +1,5 @@
-from tkinter import Tk,Label,Button,Canvas,filedialog
+from tkinter import Tk,Label,Button,Canvas,filedialog,messagebox
+import tkinter.messagebox
 import os
 
 
@@ -42,16 +43,18 @@ import os
 
 
 # if the folder doesn't exist, the folder is made, 
-# else exit() script so nothing gets accidently overwritten.
+# else tkniter display ERRORbox and execute exit() to end script so nothing gets accidently overwritten.
 def makeMyFolder(folder):
     if not os.path.exists(folder):
         os.makedirs(folder)
-        print('Made your folder: ' + folder)
-    else:
+        print('OK: '+folder)
+    else:        
         print('** CAUTION **            This folder already exists: ' + folder)
         print('** SCRIPT TERMINATED **  Check the path is correct')
-        print('')
-        exit()
+        print('')    
+        app.destroy()
+        exit()        
+
 
 # changes directory and makes file in opened directory. 
 # Careful, the f.write will clear any existing data. 
@@ -60,7 +63,7 @@ def makeMyFile(folder, file):
     os.chdir(folder)
     with open(file,'w') as f:
         f.write('')
-        print('Built: '+ file)
+        print('OK: '+ folder +''+file)
 
 
 # changes the colour of the button when clicked on
@@ -121,59 +124,64 @@ def include_java():
         button_java["bg"] = "red"  
         my_canvas.delete("tag_java")
         my_canvas.create_line(192, 200, 220, 200, fill="#444", width="4", tag="tag_java")
-        my_canvas.create_text(230, 200, text="main.js", fill="#444", font=("bold 20"), anchor="w", tag="tag_java")
-              
+        my_canvas.create_text(230, 200, text="main.js", fill="#444", font=("bold 20"), anchor="w", tag="tag_java")              
     else:        
         button_java["bg"] = "green"
         my_canvas.delete("tag_java")
         my_canvas.create_line(192, 200, 220, 200, fill="green", width="4", tag="tag_java")
         my_canvas.create_text(230, 200, text="main.js", fill="green", font=("bold 20"), anchor="w", tag="tag_java")
-def build(): 
-    # makes folder "webSite" and makes empty file "index.html"
-    if button_index["bg"] == "green":
-        folder = folderName
-        file = 'index.html'
+
+
+def build():     
+    if os.path.exists(folderName):        
+        print('Warning box displayed: '+folderName+' already exists.')    
+        tkinter.messagebox.showerror("Overwrite WARNING", appOverwriteWarning)
+        filedialog.askopenfilename(initialdir="/", title="Move or Rename Folder: "+ folderName)
+    else:                
+        # makes folder "webSite" and makes empty file "index.html"
+        if button_index["bg"] == "green":
+            folder = folderName
+            file = 'index.html'
+            makeMyFolder(folder)
+            makeMyFile(folder, file)
+
+        # makes folder "css" inside webSite folder and makes empty file "style.css"
+        if button_style["bg"] == "green":
+            folder = folderName + "css/"
+            file = 'style.css'
+            makeMyFolder(folder)
+            makeMyFile(folder, file)
+
+        # makes folder "webSite" and makes empty file "index.html"
+        if button_robots["bg"] == "green":
+            folder = folderName
+            file = 'robots.txt'
+            makeMyFile(folder, file)
+
+        # makes folder "webSite" and makes empty file "index.html"
+        if button_manifest["bg"] == "green":
+            folder = folderName
+            file = 'manifest.json'
+            makeMyFile(folder, file)
+
+        # makes folder "webSite" and makes empty file "index.html"
+        if button_java["bg"] == "green":
+            folder = folderName
+            file = 'main.js'
+            makeMyFile(folder, file)
+
+        # makes an empty folder "img" inside Website folder
+        folder = folderName + "img/"
         makeMyFolder(folder)
-        makeMyFile(folder, file)
 
-    # makes folder "css" inside webSite folder and makes empty file "style.css"
-    if button_style["bg"] == "green":
-        folder = folderName + "css"
-        file = 'style.css'
-        makeMyFolder(folder)
-        makeMyFile(folder, file)
-
-    # makes folder "webSite" and makes empty file "index.html"
-    if button_robots["bg"] == "green":
-        folder = folderName
-        file = 'robots.txt'
-        # makeMyFolder(folder)
-        makeMyFile(folder, file)
-
-    # makes folder "webSite" and makes empty file "index.html"
-    if button_manifest["bg"] == "green":
-        folder = folderName
-        file = 'manifest.json'
-        # makeMyFolder(folder)
-        makeMyFile(folder, file)
-
-    # makes folder "webSite" and makes empty file "index.html"
-    if button_java["bg"] == "green":
-        folder = folderName
-        file = 'main.js'
-        # makeMyFolder(folder)
-        makeMyFile(folder, file)
-
-    # makes an empty folder "img" inside Website folder
-    folder = folderName + "img"
-    makeMyFolder(folder)
-
-    # opens file manager to display made folder and files
-    filedialog.askopenfilename(initialdir="/", title="Your new files and folders are in: "+ folderName)
+        # opens file manager to display made folder and files
+        filedialog.askopenfilename(initialdir="/", title="Your new files and folders are in: "+ folderName)
+        app.destroy()
+        exit()
        
 def endApp():
     app.destroy()
-
+    exit()
 
  
 # defines variables as listed
@@ -181,10 +189,12 @@ appTitle = "Quick Website Structure"
 appDescription = "This app is for anyone who is building a website from complete scratch using HTML and CSS. The app reduces time in the basic setup of file structure by building a common folders and adding blank basic files.\nBy default, the files and folders include - index.html, style.css, robots.txt, mainfest.json and main.js."
 appInstructions = "Click 'BUILD' for default, or deselect as required."
 appCopyright = "Framework2232 © 2020 - https://framework2232.github.io"
+appOverwriteWarning = "APP WARNING:\n    These folder(s) or file(s) already exist.\nSOLUTION:\n    Move or rename the existing files or folders\n    Select 'BUILD' again."
 
 
 # build folder in this varialble...
 folderName = '/website/'
+
 
 # define common button styles
 buttBG = "green"
@@ -246,7 +256,6 @@ button_build.configure(bg = buttBG, fg = buttFG, font=buttFONT, width = buttWIDT
 
 # =============== BUILD CANVAS (diagram)===================
 my_canvas = Canvas(app, width=400, height="220", bg="#141414", highlightthickness=0)
-
 my_canvas.create_text(140, 20, text="/website/", fill="green", font=("bold 20"), anchor="e")
 my_canvas.create_line(150, 20, 192, 20, fill="green", width="4")
 # line = vertical
