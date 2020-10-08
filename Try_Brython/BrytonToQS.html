@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Python</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython_stdlib.js"></script>
+    <link link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+
+<body onload="brython()">
+    <main>
+        <div>
+            <h1 id="appTitle">QS File Template</h1>
+            <p id="appDescription">QS File Template is for anyone who is building a website from complete scratch using HTML and CSS. QS File Template reduces time in the basic setup of file structure by building a common folders and adding blank basic files.\nBy default, the files and folders include - index.html, style.css, robots.txt, mainfest.json and main.js.</p>
+            <p id="appInstructions">Click 'BUILD' for default, or deselect as required.</p>
+        </div>
+        <div class="sideButtons">
+            <button id="btn_index">index.html</button>
+            <button id="btn_style">style.css</button>
+            <button id="btn_robots">robots.txt</button>
+            <button id="btn_manifest">manifest.json</button>
+            <button id="btn_main">main.js</button>
+        </div>
+        <div class="bottomButtons">
+            <button id="btn_build">BUILD</button>
+        </div>
+
+    </main>
+    <footer>
+        <a href="https://framework2232.github.io"><p id="appCopyright">Copyright © 2020, Framework2232</p></a>
+        <!-- document['appCopyright'] <= appCopyright -->
+    </footer>
+
+    <script type="text/python" id="script0">
+        from browser import document, alert
+
+        # ========define variables=========
+        eIndex = document["btn_index"]
+        eIndex.style.backgroundColor = "green"
+        eStyle = document["btn_style"]
+        eStyle.style.backgroundColor = "green"
+        eRobots = document["btn_robots"]
+        eRobots.style.backgroundColor = "green"
+        eManifest = document["btn_manifest"]
+        eManifest.style.backgroundColor = "green"
+        eMain = document["btn_main"]
+        eMain.style.backgroundColor = "green"
+        eBuild = document["btn_build"]
+        eBuild.style.backgroundColor = "green"
+
+
+        def includeIndex(e):           
+            if eIndex.style.backgroundColor == "green":
+                eIndex.style.backgroundColor = "red"                          
+            else:
+                eIndex.style.backgroundColor = "green"
+            checkNoneSelected()
+
+        def includeStyle(e):           
+            if eStyle.style.backgroundColor == "green":
+                eStyle.style.backgroundColor = "red"                          
+            else:
+                eStyle.style.backgroundColor = "green"
+            checkNoneSelected()
+
+        def includeRobots(e):           
+            if eRobots.style.backgroundColor == "green":
+                eRobots.style.backgroundColor = "red"                          
+            else:
+                eRobots.style.backgroundColor = "green"
+            checkNoneSelected()
+
+        def includeManifest(e):           
+                if eManifest.style.backgroundColor == "green":
+                    eManifest.style.backgroundColor = "red"                          
+                else:
+                    eManifest.style.backgroundColor = "green"
+                checkNoneSelected()
+
+        def includeMain(e):           
+                if eMain.style.backgroundColor == "green":
+                    eMain.style.backgroundColor = "red"                          
+                else:
+                    eMain.style.backgroundColor = "green"
+                checkNoneSelected()
+
+        def checkNoneSelected():
+            if eIndex.style.backgroundColor == "red" and eStyle.style.backgroundColor == "red" and eRobots.style.backgroundColor == "red" and eManifest.style.backgroundColor == "red" and eMain.style.backgroundColor == "red":
+                eBuild.style.backgroundColor = "red"
+            else:
+                eBuild.style.backgroundColor = "green"
+        
+
+
+
+        # =============================================
+        #       BUILD DEFINITION
+        # =============================================
+        def build(e):
+            if eBuild.style.backgroundColor == "red":
+                alert("Nothing to BUILD as nothing has been selected. Select one of the red buttons.")
+            elif eBuild.style.backgroundColor == "green":
+                eBuild.style.backgroundColor = "blue"
+            
+                
+           
+
+
+        document['btn_index'].bind('click', includeIndex)
+        document['btn_style'].bind('click', includeStyle)
+        document['btn_robots'].bind('click', includeRobots)
+        document['btn_manifest'].bind('click', includeManifest)
+        document['btn_main'].bind('click', includeMain)
+        document['btn_build'].bind('click', build)
+        
+
+    </script>
+
+
+</body>
+
+<!-- alert("APP WARNING: These folder(s) or file(s) already exist.\n\nSOLUTION: Move or rename the existing files or folders then select 'BUILD' again.") -->
+
+
+</html>
+
